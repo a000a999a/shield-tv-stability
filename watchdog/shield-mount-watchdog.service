@@ -1,0 +1,6 @@
+[Unit]
+Description=Shield CIFS mount watchdog (oneshot)
+
+[Service]
+Type=oneshot
+ExecStart=%h/Projects/shield-tv-stability/watchdog/mount-watchdog.sh

@@ -1,0 +1,9 @@
+[Unit]
+Description=Shield CIFS mount watchdog timer
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=30s
+
+[Install]
+WantedBy=timers.target

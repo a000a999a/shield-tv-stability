@@ -1,0 +1,8 @@
+# Add to /etc/sudoers.d/shield-watchdog (chmod 440)
+# Replace "youruser" with your Linux username.
+# Replace "mnt-nvidia.mount" with your actual systemd unit name.
+# The unit name mirrors the mount path: /mnt/nvidia → mnt-nvidia.mount
+
+youruser ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart mnt-nvidia.mount
+youruser ALL=(ALL) NOPASSWD: /usr/bin/umount -l /mnt/nvidia
+ENDFILE'

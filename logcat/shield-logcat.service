@@ -1,0 +1,11 @@
+[Unit]
+Description=NVIDIA Shield logcat capture
+After=network.target
+
+[Service]
+ExecStart=%h/Projects/shield-tv-stability/logcat/capture.sh
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=default.target
